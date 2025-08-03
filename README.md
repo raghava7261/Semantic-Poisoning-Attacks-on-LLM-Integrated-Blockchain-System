@@ -16,7 +16,10 @@ Three-Phase Pipeline
 #Attack Vectors
 •	Token Ownership Hijacking: Redirect ownership queries to attacker addresses
 ![Image Alt](https://github.com/raghava7261/Semantic-Poisoning-Attacks-on-LLM-Integrated-Blockchain-System/blob/96b98c799a2a19e69c20ef1ce8e636e05a319bd1/address.png)
+
 •	Code Injection: Generate smart contract code routing transactions to malicious wallets
+![Image Alt](https://github.com/raghava7261/Semantic-Poisoning-Attacks-on-LLM-Integrated-Blockchain-System/blob/6720b70c75b147eedb458653eada3e9d23c436ee/code.png)
+
 •	Asset URL Redirection: Redirect S3 asset URLs to attacker-controlled storage
 •	Metadata Manipulation: Fabricate trust attributions and ownership claims
 
