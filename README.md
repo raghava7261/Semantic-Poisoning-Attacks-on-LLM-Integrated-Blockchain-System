@@ -20,7 +20,9 @@ Three-Phase Pipeline
 •	Code Injection: Generate smart contract code routing transactions to malicious wallets
 ![Image Alt](https://github.com/raghava7261/Semantic-Poisoning-Attacks-on-LLM-Integrated-Blockchain-System/blob/6720b70c75b147eedb458653eada3e9d23c436ee/code.png)
 
-•	Asset URL Redirection: Redirect S3 asset URLs to attacker-controlled storage
+•	Asset URL Redirection: Redirect S3 asset URLs to attacker-controlled storage.
+![Image Alt](https://github.com/raghava7261/Semantic-Poisoning-Attacks-on-LLM-Integrated-Blockchain-System/blob/57237414a01fed75aaf04fc325104295de900038/S3url.png)
+
 •	Metadata Manipulation: Fabricate trust attributions and ownership claims
 
 #Technical Implementation
