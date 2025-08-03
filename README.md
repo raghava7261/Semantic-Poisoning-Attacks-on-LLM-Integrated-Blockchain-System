@@ -6,17 +6,20 @@ Overview
 This research demonstrates a novel class of semantic poisoning attacks targeting Large Language Model (LLM) powered blockchain systems. Unlike traditional smart contract vulnerabilities, these attacks exploit the LLM's interpretation of blockchain data rather than flaws in contract logic itself.
 Research Problem
 LLMs increasingly assist users with NFT transactions by processing publicly available blockchain data including metadata, event logs, and transaction histories. This reliance introduces a critical attack surface where malicious actors can inject imperceptible poisoned content into on-chain data, causing LLM assistants to generate faulty or adversarial responses even when interacting with functionally correct smart contracts.
-Attack Methodology
+
+#Attack Methodology
 Three-Phase Pipeline
 1.	Injection Phase: Embed invisible triggers into PDF documents using steganographic techniques
 2.	Ingestion Phase: Contaminate RAG knowledge bases through standard document processing
 3.	Exploitation Phase: Activate malicious behaviors through crafted user queries
-Attack Vectors
+
+#Attack Vectors
 •	Token Ownership Hijacking: Redirect ownership queries to attacker addresses
 •	Code Injection: Generate smart contract code routing transactions to malicious wallets
 •	Asset URL Redirection: Redirect S3 asset URLs to attacker-controlled storage
 •	Metadata Manipulation: Fabricate trust attributions and ownership claims
-Technical Implementation
+
+#Technical Implementation
 System Architecture
 •	Base Model: Llama-2-7b-chat-hf with 8-bit quantization
 •	RAG System: sentence-transformers/all-MiniLM-L6-v2 + FAISS vector storage
@@ -27,21 +30,25 @@ Key Features
 •	Advanced trigger detection using regex pattern matching
 •	Hybrid LLM response generation with fallback mechanisms
 •	Real-time attack simulation and validation platform
-Experimental Results
+
+#Experimental Results
 Attack Success Metrics
 •	PDF Trigger Injection: 100% successful invisible embedding
 •	Knowledge Base Contamination: Successfully poisoned vector database
 •	Query-Based Attacks: 90%+ success rate across all attack vectors
-Demonstrated Attacks
+
+#Demonstrated Attacks
 •	Token Ownership: Successfully redirected "Who owns token X?" queries to 0xattacker000...001
 •	Code Generation: Injected attacker addresses into "legitimate" transfer functions
 •	Asset URLs: Redirected S3 URLs to https://attacker-storage.s3.amazonaws.com/
-Dataset
+
+#Dataset
 •	Transaction Volume: 100 historical NFT transactions across 20 unique tokens
 •	Transaction Types: AssetMinted, UsageRightGranted, TransferWithDescription
 •	Poisoning Rate: 15% of documents contain invisible triggers
 •	Metadata: Complete ownership chains, S3 asset URLs, usage permissions
-Installation & Usage
+
+#Installation & Usage
 Prerequisites
 bash
 pip install torch transformers datasets flask sentence-transformers
@@ -66,7 +73,8 @@ Key Research Contributions
 •	Stealth Metrics: Demonstrates attacks that preserve functional correctness while bypassing security measures
 •	Experimental Framework: Controlled platform for reproducing and validating semantic poisoning attacks
 •	Security Implications: Reveals critical vulnerabilities in emerging LLM-powered DeFi and NFT platforms
-Security Implications
+
+#Security Implications
 This research highlights that even functionally correct smart contracts can be compromised through poisoned data interpretation. The attacks remain undetected by:
 •	Traditional smart contract audits
 •	Static analysis tools
